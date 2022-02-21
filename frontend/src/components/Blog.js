@@ -82,18 +82,11 @@ const Blog = () => {
         <div className='container mt-3'>
             <div className="nav-scroller py-1 mb-2">
                 <nav className="nav d-flex justify-content-between">
-                    <Link className="p-2 text-muted" to='/category/world'>World</Link>
-                    <Link className="p-2 text-muted" to='/category/environment'>Environment</Link>
-                    <Link className="p-2 text-muted" to='/category/technology'>Technology</Link>
-                    <Link className="p-2 text-muted" to='/category/design'>Design</Link>
-                    <Link className="p-2 text-muted" to='/category/culture'>Culture</Link>
-                    <Link className="p-2 text-muted" to='/category/business'>Business</Link>
-                    <Link className="p-2 text-muted" to='/category/politics'>Politics</Link>
-                    <Link className="p-2 text-muted" to='/category/opinion'>Opinion</Link>
-                    <Link className="p-2 text-muted" to='/category/science'>Science</Link>
-                    <Link className="p-2 text-muted" to='/category/health'>Health</Link>
-                    <Link className="p-2 text-muted" to='/category/style'>Style</Link>
-                    <Link className="p-2 text-muted" to='/category/travel'>Travel</Link>
+                <Link className="p-2 text-muted" to='/category/wiki'>Wiki</Link>
+                    <Link className="p-2 text-muted" to='/category/youtube'>Youtube</Link>
+                    <Link className="p-2 text-muted" to='/category/article'>Article</Link>
+                    <Link className="p-2 text-muted" to='/category/cooperation'>Cooperation</Link>
+                    <Link className="p-2 text-muted" to='/category/twitter'>Twitter</Link>
                 </nav>
             </div>
 
