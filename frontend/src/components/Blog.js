@@ -70,6 +70,7 @@ const Blog = () => {
               <Link to={`/blog/${blogPost.slug}`} className="blog__link">
                 Continue reading
               </Link>
+
             </div>
             <div className="blog__img">
               <img
