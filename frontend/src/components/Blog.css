@@ -1,0 +1,28 @@
+.blog__wrapper {
+  margin-top: 100px;
+  padding: 0 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.blog__tile {
+  display: flex;
+  background: white;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.blog__cattegory {
+  color: #1890d1;
+  font-size: 0.9rem;
+}
+
+.blog__post {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.blog__title {
+  font-size: 10px;
+}
