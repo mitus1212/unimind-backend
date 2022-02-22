@@ -1,16 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Home.css";
 
 const home = () => (
-    <div className='container'>
-        <div className="jumbotron mt-5">
-            <h1 className="display-4">Welcome to Blog Lyfe!</h1>
-            <p className="lead">We make all kinds of awesome blog about various topics.</p>
-            <hr className="my-4" />
-            <p>Click the button below to check out our awesome blog.</p>
-            <Link className="btn btn-primary btn-lg" to='/blog' role="button">Check out our Blog</Link>
-        </div>
-    </div>
+  <header className="header__wrapper">
+    <h1 className="header__title">
+      Lorem Ipsum, <br></br> &nbsp;Dolor Sir amet
+    </h1>
+    <p className="header__description">
+      Suspendiss leo tortor, ultricies et ehestas vel, rhoncus ut <br></br>
+      magna. In hac habitasse platea dictumst.
+    </p>
+    <a href="#" className="header__button">
+      Join
+    </a>
+  </header>
 );
 
 export default home;
