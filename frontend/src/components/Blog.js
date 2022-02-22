@@ -74,7 +74,7 @@ const Blog = () => {
             <div className="blog__img">
               <img
                 width="auto"
-                height="auto"
+                height="auto "
                 src={blogPost.thumbnail}
                 alt="thumbnail"
               />
@@ -100,41 +100,20 @@ const Blog = () => {
     //   <div className="nav-scroller py-1 mb-2">
     //     <nav className="nav d-flex justify-content-between">
     //       <Link className="p-2 text-muted" to="/category/world">
-    //         World
-    //       </Link>
-    //       <Link className="p-2 text-muted" to="/category/environment">
-    //         Environment
-    //       </Link>
-    //       <Link className="p-2 text-muted" to="/category/technology">
-    //         Technology
-    //       </Link>
-    //       <Link className="p-2 text-muted" to="/category/design">
-    //         Design
-    //       </Link>
-    //       <Link className="p-2 text-muted" to="/category/culture">
-    //         Culture
-    //       </Link>
-    //       <Link className="p-2 text-muted" to="/category/business">
-    //         Business
-    //       </Link>
-    //       <Link className="p-2 text-muted" to="/category/politics">
-    //         Politics
-    //       </Link>
-    //       <Link className="p-2 text-muted" to="/category/opinion">
-    //         Opinion
-    //       </Link>
-    //       <Link className="p-2 text-muted" to="/category/science">
-    //         Science
-    //       </Link>
-    //       <Link className="p-2 text-muted" to="/category/health">
-    //         Health
-    //       </Link>
-    //       <Link className="p-2 text-muted" to="/category/style">
-    //         Style
-    //       </Link>
-    //       <Link className="p-2 text-muted" to="/category/travel">
-    //         Travel
-    //       </Link>
+    //        World
+    //      </Link>
+    //      <Link className="p-2 text-muted" to="/category/youtube">
+    //        Environment
+    //      </Link>
+    //      <Link className="p-2 text-muted" to="/category/twitter">
+    //        Technology
+    //      </Link>
+    // <Link className="p-2 text-muted" to="/category/article">
+    //   Design
+    // </Link>
+    // <Link className="p-2 text-muted" to="/category/cooperation">
+    //   Culture
+    // </Link>
     //     </nav>
     //   </div>
 

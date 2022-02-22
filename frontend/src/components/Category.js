@@ -84,41 +84,20 @@ const Category = (props) => {
       <h3 className="display-4">{currentCategory} Category</h3>
       <div className="nav-scroller py-1 mb-2">
         <nav className="nav d-flex justify-content-between">
-          <Link className="p-2 text-muted" to="/category/world">
+          <Link className="p-2 text-muted" to="/category/wiki">
             World
           </Link>
-          <Link className="p-2 text-muted" to="/category/environment">
+          <Link className="p-2 text-muted" to="/category/youtube">
             Environment
           </Link>
-          <Link className="p-2 text-muted" to="/category/technology">
+          <Link className="p-2 text-muted" to="/category/twitter">
             Technology
           </Link>
-          <Link className="p-2 text-muted" to="/category/design">
+          <Link className="p-2 text-muted" to="/category/article">
             Design
           </Link>
-          <Link className="p-2 text-muted" to="/category/culture">
+          <Link className="p-2 text-muted" to="/category/cooperation">
             Culture
-          </Link>
-          <Link className="p-2 text-muted" to="/category/business">
-            Business
-          </Link>
-          <Link className="p-2 text-muted" to="/category/politics">
-            Politics
-          </Link>
-          <Link className="p-2 text-muted" to="/category/opinion">
-            Opinion
-          </Link>
-          <Link className="p-2 text-muted" to="/category/science">
-            Science
-          </Link>
-          <Link className="p-2 text-muted" to="/category/health">
-            Health
-          </Link>
-          <Link className="p-2 text-muted" to="/category/style">
-            Style
-          </Link>
-          <Link className="p-2 text-muted" to="/category/travel">
-            Travel
           </Link>
         </nav>
       </div>
