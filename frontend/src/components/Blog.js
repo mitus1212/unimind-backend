@@ -33,6 +33,17 @@ const Blog = () => {
 
     fetchBlogs();
   }, []);
+  // return (
+  //     <div className='container mt-3'>
+  //         <div className="nav-scroller py-1 mb-2">
+  //             <nav className="nav d-flex justify-content-between">
+  //             <Link className="p-2 text-muted" to='/category/wiki'>Wiki</Link>
+  //                 <Link className="p-2 text-muted" to='/category/youtube'>Youtube</Link>
+  //                 <Link className="p-2 text-muted" to='/category/article'>Article</Link>
+  //                 <Link className="p-2 text-muted" to='/category/cooperation'>Cooperation</Link>
+  //                 <Link className="p-2 text-muted" to='/category/twitter'>Twitter</Link>
+  //             </nav>
+  //         </div>
 
   const capitalizeFirstLetter = (word) => {
     if (word) return word.charAt(0).toUpperCase() + word.slice(1);
@@ -47,25 +58,27 @@ const Blog = () => {
       return list.push(
         <>
           <div className="blog__post">
-            <strong className="blog__cattegory">
-              {capitalizeFirstLetter(blogPost.category)}
-            </strong>
-            <h3 className="blog__title">{blogPost.title}</h3>
-            <div className="blog__date">
-              {blogPost.month} {blogPost.day}
+            <div className="blog__content">
+              <strong className="blog__cattegory">
+                {capitalizeFirstLetter(blogPost.category)}
+              </strong>
+              <h3 className="blog__title">{blogPost.title}</h3>
+              <div className="blog__date">
+                {blogPost.month} {blogPost.day}
+              </div>
+              <p className="blog__text">{blogPost.excerpt}</p>
+              <Link to={`/blog/${blogPost.slug}`} className="blog__link">
+                Continue reading
+              </Link>
             </div>
-            <p className="blog__text">{blogPost.excerpt}</p>
-            <Link to={`/blog/${blogPost.slug}`} className="">
-              Continue reading
-            </Link>
-          </div>
-          <div className="">
-            <img
-              width="200"
-              height="250"
-              src={blogPost.thumbnail}
-              alt="thumbnail"
-            />
+            <div className="blog__img">
+              <img
+                width="auto"
+                height="auto"
+                src={blogPost.thumbnail}
+                alt="thumbnail"
+              />
+            </div>
           </div>
         </>
       );
