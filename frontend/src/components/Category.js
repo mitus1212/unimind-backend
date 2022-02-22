@@ -49,6 +49,7 @@ const Category = (props) => {
             <h3 className="mb-0">{blogPost.title}</h3>
             <div className="mb-1 text-muted">
               {blogPost.month} {blogPost.day}
+
             </div>
             <p className="card-text mb-auto">{blogPost.excerpt}</p>
             <Link to={`/blog/${blogPost.slug}`} className="stretched-link">
