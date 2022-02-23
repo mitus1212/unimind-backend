@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import "./Navbar.css";
+import "./Navbar.scss";
 
 const Navbar = ({ toggleSidebar }) => (
   <nav className="navbar">
