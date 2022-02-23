@@ -2,10 +2,10 @@ import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Layout from "./hocs/Layout";
-import Home from "./components/Home/Home";
-import Blog from "./components/Blog/Blog";
-import BlogDetail from "./components/BlogDetail/BlogDetail";
-import Category from "./components/Category/Category";
+import Home from "./Views/Home/Home";
+import Blog from "./Views/Blog/Blog";
+import BlogDetail from "./Components/BlogDetail/BlogDetail";
+import Category from "./Components/Category/Category";
 
 const App = () => (
   <Router>
