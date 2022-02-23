@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navigation from "../components/Navigation";
 
 const layout = (props) => (
   <div>
-    <Navbar />
+    <Navigation />
     {props.children}
   </div>
 );
