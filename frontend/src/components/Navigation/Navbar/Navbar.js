@@ -1,14 +1,16 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
+import logo from "./unimind_logo.png";
 
 const Navbar = ({ toggleSidebar }) => (
   <nav className="navbar">
-    <div className="navbar__logo">
-      <Link className="navbar__logo__link" to="/">
-        UNIMIND.DAO
-      </Link>
-    </div>
+    <NavLink exact to="/">
+      <div className="navbar__logo">
+        <img alt="logo" src={logo}></img>
+      </div>
+    </NavLink>
+
     <ul className="navbar__list">
       <li className="navbar__list__item">
         <NavLink className="navbar__link" exact to="/">
@@ -32,6 +34,14 @@ const Navbar = ({ toggleSidebar }) => (
         className="navbar__media__item"
         rel="noopener noreferrer"
         target="_blank"
+        href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjTwv3Yjuz1AhWltYsKHTmmDkYQFnoECAYQAQ&url=https%3A%2F%2Ftwitter.com%2FUnimindDAO&usg=AOvVaw0ih4xp3qAh8AJjOdl8uB90"
+      >
+        <i className="fab fa-twitter"></i>
+      </a>
+      <a
+        className="navbar__media__item"
+        rel="noopener noreferrer"
+        target="_blank"
         href="https://discord.gg/dkRDuzF43W"
       >
         <i className="fab fa-discord"></i>
@@ -43,14 +53,6 @@ const Navbar = ({ toggleSidebar }) => (
         href="https://www.youtube.com/channel/UChg6fu3P7qqHJedobi_ALoA"
       >
         <i className="fab fa-youtube"></i>
-      </a>
-      <a
-        className="navbar__media__item"
-        rel="noopener noreferrer"
-        target="_blank"
-        href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjTwv3Yjuz1AhWltYsKHTmmDkYQFnoECAYQAQ&url=https%3A%2F%2Ftwitter.com%2FUnimindDAO&usg=AOvVaw0ih4xp3qAh8AJjOdl8uB90"
-      >
-        <i className="fab fa-twitter"></i>
       </a>
     </div>
     <div className="navbar__button" onClick={toggleSidebar}>
