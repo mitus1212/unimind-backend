@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "./BlogDetail.scss";
+
 
 const BlogDetail = (props) => {
   const [blog, setBlog] = useState({});

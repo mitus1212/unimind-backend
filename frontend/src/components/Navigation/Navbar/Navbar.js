@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./Navbar.scss";
-import logo from "./unimind_logo.png";
+
+import logo from "../../../assets/images/unimind_logo.png";
 
 const Navbar = ({ toggleSidebar }) => (
   <nav className="navbar">
@@ -56,11 +56,15 @@ const Navbar = ({ toggleSidebar }) => (
         <i className="fab fa-youtube"></i>
       </a>
     </div>
-    <div className="navbar__button" onClick={toggleSidebar}>
-      <div className="navbar__button__component"></div>
-      <div className="navbar__button__component"></div>
-      <div className="navbar__button__component"></div>
+    <div className="hamburger" onClick={toggleSidebar}>
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
     </div>
+
+    {/* <div className="navbar__button" onClick={toggleSidebar}>
+      <div className="navbar__button__component"></div>
+    </div> */}
   </nav>
 );
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Home.scss";
+
 
 const home = () => (
   <header className="header__wrapper">
@@ -8,10 +8,13 @@ const home = () => (
       Lorem Ipsum, <br></br> &nbsp;Dolor Sir amet
     </h1>
     <p className="header__description">
-      Suspendiss leo tortor, ultricies et ehestas vel, rhoncus ut <br></br>
-      magna. In hac habitasse platea dictumst.
+      Suspendiss leo tortor, ultricies et ehestas vel, rhoncus ut 
+      magna. In hac habitasse platea.
     </p>
-    <a href="#" className="header__button">
+    <a className="header__button"
+         rel="noopener noreferrer"
+        target="_blank"
+        href="https://discord.gg/dkRDuzF43W">
       Join
     </a>
   </header>

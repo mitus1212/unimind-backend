@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { AiFillHome } from 'react-icons/ai';
 import { BsFileEarmarkPostFill } from 'react-icons/bs';
 import { FaInfo } from 'react-icons/fa';
-import "./Sidebar.scss";
+
 
 const Sidebar = ({ isOpen, closeSidebar }) => {
   const styles = isOpen ? "sidebar sidebar--open" : "sidebar sidebar--closed";
@@ -17,7 +17,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
       )}
       <nav className={`${styles}`}>
         <ul className="sidebar__list">
-          <div className="sidebar__logo">UNIMIND</div>
+          <div className="sidebar__logo">Unimind</div>
           <li className="sidebar__list__item" onClick={closeSidebar}>
             <NavLink className="sidebar__link" exact to="/">
             <AiFillHome className="sidebar__icon" />Home
