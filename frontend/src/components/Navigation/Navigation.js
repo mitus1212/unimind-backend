@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar/Sidebar";
 
 const Navigation = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+  
 
   const closeSidebar = () => {
     setShowSidebar(false);
@@ -15,7 +16,7 @@ const Navigation = () => {
 
   return (
     <Fragment>
-      <Navbar toggleSidebar={toggleSidebar} />
+      <Navbar  isOpen={showSidebar} toggleSidebar={toggleSidebar} />
       <Sidebar isOpen={showSidebar} closeSidebar={closeSidebar} />
     </Fragment>
   );

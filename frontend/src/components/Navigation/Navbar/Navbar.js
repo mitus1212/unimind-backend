@@ -1,10 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 
 import logo from "../../../assets/images/unimind_logo.png";
 
-const Navbar = ({ toggleSidebar }) => (
-  <nav className="navbar">
+const Navbar = ({ isOpen, toggleSidebar }) => {
+  const hamburgerStyle = isOpen ? "navbar__button__component navbar__button__component--active" : "navbar__button__component";
+
+  return (
+    <Fragment>
+
+    <nav className="navbar">
     <NavLink exact to="/">
       <div className="navbar__logo">
         <img alt="logo" src={logo}></img>
@@ -56,16 +61,22 @@ const Navbar = ({ toggleSidebar }) => (
         <i className="fab fa-youtube"></i>
       </a>
     </div>
-    <div className="hamburger" onClick={toggleSidebar}>
-          <span className="line"></span>
-          <span className="line"></span>
-          <span className="line"></span>
-    </div>
-
-    {/* <div className="navbar__button" onClick={toggleSidebar}>
-      <div className="navbar__button__component"></div>
-    </div> */}
+ 
+    <button className="navbar__button" onClick={toggleSidebar}>
+      <div className={`${hamburgerStyle}`}></div>
+      <div className={`${hamburgerStyle}`}></div>
+      <div className={`${hamburgerStyle}`}></div>
+    </button>
+      
   </nav>
-);
+  </Fragment>
+  );
+}
+
+
+
+
+   
+
 
 export default Navbar;
