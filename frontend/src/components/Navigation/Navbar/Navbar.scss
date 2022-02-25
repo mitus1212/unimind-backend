@@ -5,7 +5,8 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700');
 .navbar {
   background-color: #141414;
   display: flex;
@@ -15,7 +16,8 @@
   height: 4.2rem;
   padding: 0.7rem 1.5rem;
   // font-family: Lovelo;
-  font-family: "Poppins", sans-serif;
+  // font-family: "Poppins", sans-serif;
+
 
   @include respond(tab-port) {
     display: flex;
@@ -42,7 +44,7 @@
     list-style: none;
 
     height: 100%;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Roboto Mono', monospace;
     transform: translateY(1px);
 
     @include respond(phone) {

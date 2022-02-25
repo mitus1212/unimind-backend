@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import { AiFillHome } from 'react-icons/ai';
+import { BsFileEarmarkPostFill } from 'react-icons/bs';
+import { FaInfo } from 'react-icons/fa';
 import "./Sidebar.scss";
 
 const Sidebar = ({ isOpen, closeSidebar }) => {
@@ -14,30 +17,20 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
       )}
       <nav className={`${styles}`}>
         <ul className="sidebar__list">
-          <div className="sidebar__logo">Navbar App</div>
+          <div className="sidebar__logo">UNIMIND</div>
           <li className="sidebar__list__item" onClick={closeSidebar}>
             <NavLink className="sidebar__link" exact to="/">
-              Home
+            <AiFillHome className="sidebar__icon" />Home
+            </NavLink>
+          </li>
+          <li className="sidebar__list__item" onClick={closeSidebar}>
+            <NavLink className="sidebar__link" to="/blog">
+            <BsFileEarmarkPostFill className="sidebar__icon" />Blog
             </NavLink>
           </li>
           <li className="sidebar__list__item" onClick={closeSidebar}>
             <NavLink className="sidebar__link" to="/about">
-              About
-            </NavLink>
-          </li>
-          <li className="sidebar__list__item" onClick={closeSidebar}>
-            <NavLink className="sidebar__link" to="/services">
-              Services
-            </NavLink>
-          </li>
-          <li className="sidebar__list__item" onClick={closeSidebar}>
-            <NavLink className="sidebar__link" to="/gallery">
-              Gallery
-            </NavLink>
-          </li>
-          <li className="sidebar__list__item" onClick={closeSidebar}>
-            <NavLink className="sidebar__link" to="/contact">
-              Contact
+            <FaInfo className="sidebar__icon" />About
             </NavLink>
           </li>
         </ul>

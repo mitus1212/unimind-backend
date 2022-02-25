@@ -8,6 +8,7 @@ const Navbar = ({ toggleSidebar }) => (
     <NavLink exact to="/">
       <div className="navbar__logo">
         <img alt="logo" src={logo}></img>
+        
       </div>
     </NavLink>
 
