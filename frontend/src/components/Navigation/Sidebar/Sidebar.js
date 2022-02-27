@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
-import { AiFillHome } from 'react-icons/ai';
-import { BsFileEarmarkPostFill } from 'react-icons/bs';
-import { FaInfo } from 'react-icons/fa';
-
+import { AiFillHome } from "react-icons/ai";
+import { BsFileEarmarkPostFill } from "react-icons/bs";
+import { FaInfo } from "react-icons/fa";
 
 const Sidebar = ({ isOpen, closeSidebar }) => {
   const styles = isOpen ? "sidebar sidebar--open" : "sidebar sidebar--closed";
@@ -18,21 +17,26 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
       <nav className={`${styles}`}>
         <ul className="sidebar__list">
           <div className="sidebar__logo">Unimind</div>
-          <li className="sidebar__list__item" onClick={closeSidebar}>
-            <NavLink className="sidebar__link" exact to="/">
-            <AiFillHome className="sidebar__icon" />Home
-            </NavLink>
-          </li>
-          <li className="sidebar__list__item" onClick={closeSidebar}>
-            <NavLink className="sidebar__link" to="/blog">
-            <BsFileEarmarkPostFill className="sidebar__icon" />Blog
-            </NavLink>
-          </li>
-          <li className="sidebar__list__item" onClick={closeSidebar}>
-            <NavLink className="sidebar__link" to="/about">
-            <FaInfo className="sidebar__icon" />About
-            </NavLink>
-          </li>
+
+          <NavLink className="sidebar__link" exact to="/">
+            <li className="sidebar__list__item" onClick={closeSidebar}>
+              <AiFillHome className="sidebar__icon" />
+              Home
+            </li>
+          </NavLink>
+
+          <NavLink className="sidebar__link" exact to="/blog">
+            <li className="sidebar__list__item" onClick={closeSidebar}>
+              <BsFileEarmarkPostFill className="sidebar__icon" />
+              Blog
+            </li>
+          </NavLink>
+          <NavLink className="sidebar__link" exact to="/about">
+            <li className="sidebar__list__item" onClick={closeSidebar}>
+              <FaInfo className="sidebar__icon" />
+              About
+            </li>
+          </NavLink>
         </ul>
       </nav>
     </Fragment>

@@ -1,9 +1,5 @@
-
-
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700');
-
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700");
 
 .navbar {
   font-family: $nav-font;
@@ -12,11 +8,10 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0.5px 1px 0 rgba(32, 32, 32, 0.1);
-  height: 6rem;
+  height: 5rem;
   padding: 0.7rem 2rem;
   // font-family: Lovelo;
   // font-family: "Poppins", sans-serif;
-
 
   @include respond(tab-port) {
     display: flex;
@@ -27,11 +22,16 @@
 
   &__logo {
     display: flex;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     margin-right: 3rem;
     transform: translateY(0.1rem);
     padding: 0;
+
+    @include respond(tab-port) {
+      width: 4rem;
+      height: 4rem;
+    }
 
     img {
       width: 100%;
@@ -53,7 +53,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
 
       @include respond(tab-port) {
         display: none;
@@ -78,9 +78,8 @@
       border-radius: 25px;
       font-size: 1.5rem;
 
-
       @include respond(tab-port) {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
     }
 
@@ -102,7 +101,6 @@
 
   &__button {
     display: none;
-  
 
     @include respond(tab-port) {
       display: block;
@@ -115,7 +113,7 @@
       &:focus {
         outline: none;
         box-shadow: none;
-      } 
+      }
 
       // &:hover {
       //   height: 70%;
@@ -128,7 +126,7 @@
         width: 100%;
         background-color: white;
         transition: all 0.2s ease;
-        
+
         &:nth-child(1) {
           margin-bottom: 0.8rem;
         }
@@ -136,10 +134,8 @@
         &:nth-child(3) {
           margin-top: 0.8rem;
         }
-        
 
         &--active {
-
           &:nth-child(1) {
             transform: translateY(1.2rem) rotate(-45deg);
             -ms-transform: translateY(1.2rem) rotate(-45deg);
@@ -167,7 +163,6 @@
 
         @include respond(tab-port) {
           display: block;
-          
         }
       }
     }
