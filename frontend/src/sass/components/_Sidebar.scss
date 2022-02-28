@@ -13,6 +13,10 @@
     background-color: #141414;
     padding: 2.2rem 0;
     font-family: $nav-font;
+
+    @include respond(phone) {
+      width: 50vw;
+    }
   }
 
   &--open {
@@ -46,7 +50,7 @@
       width: 100%;
       display: flex;
       align-items: center;
-      padding: 1rem 2rem;
+      padding: 2rem 2rem;
 
       &:hover {
         background-color: #303030;
@@ -71,7 +75,7 @@
   }
 
   &__link {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     text-decoration: none;
     color: white;
   }

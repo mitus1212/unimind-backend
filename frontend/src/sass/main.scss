@@ -1,13 +1,13 @@
-@import 'abstracts/mixins';
+@import "abstracts/mixins";
 
-@import 'base/base';
-@import 'base/typography';
+@import "base/base";
+@import "base/typography";
 
-@import 'components/BlogDetail';
-@import 'components/Category';
-@import 'components/Navbar';
-@import 'components/Sidebar';
+@import "components/BlogDetail";
+@import "components/Category";
+@import "components/Navbar";
+@import "components/Sidebar";
 
-
-@import 'views/Blog';
-@import 'views/Home';
+@import "views/Blog";
+@import "views/Home";
+@import "views/Team";

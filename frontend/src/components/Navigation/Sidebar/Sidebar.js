@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { BsFileEarmarkPostFill } from "react-icons/bs";
 import { FaInfo } from "react-icons/fa";
+import { MdPeople } from "react-icons/md";
+import { AiFillStar } from "react-icons/ai";
+import { GiStoneCrafting } from "react-icons/gi";
 
 const Sidebar = ({ isOpen, closeSidebar }) => {
   const styles = isOpen ? "sidebar sidebar--open" : "sidebar sidebar--closed";
@@ -24,17 +27,28 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
               Home
             </li>
           </NavLink>
-
           <NavLink className="sidebar__link" exact to="/blog">
             <li className="sidebar__list__item" onClick={closeSidebar}>
               <BsFileEarmarkPostFill className="sidebar__icon" />
               Blog
             </li>
           </NavLink>
-          <NavLink className="sidebar__link" exact to="/about">
+          <NavLink className="sidebar__link" exact to="/team">
             <li className="sidebar__list__item" onClick={closeSidebar}>
-              <FaInfo className="sidebar__icon" />
-              About
+              <MdPeople className="sidebar__icon" />
+              Team
+            </li>
+          </NavLink>
+          <NavLink className="sidebar__link" exact to="/mission">
+            <li className="sidebar__list__item" onClick={closeSidebar}>
+              <AiFillStar className="sidebar__icon" />
+              Mission
+            </li>
+          </NavLink>
+          <NavLink className="sidebar__link" exact to="/guilds">
+            <li className="sidebar__list__item" onClick={closeSidebar}>
+              <GiStoneCrafting className="sidebar__icon" />
+              Guilds
             </li>
           </NavLink>
         </ul>
