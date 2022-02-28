@@ -6,6 +6,7 @@ import { FaInfo } from "react-icons/fa";
 import { MdPeople } from "react-icons/md";
 import { AiFillStar } from "react-icons/ai";
 import { GiStoneCrafting } from "react-icons/gi";
+import { FaBell } from "react-icons/fa";
 
 const Sidebar = ({ isOpen, closeSidebar }) => {
   const styles = isOpen ? "sidebar sidebar--open" : "sidebar sidebar--closed";
@@ -27,12 +28,6 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
               Home
             </li>
           </NavLink>
-          <NavLink className="sidebar__link" exact to="/blog">
-            <li className="sidebar__list__item" onClick={closeSidebar}>
-              <BsFileEarmarkPostFill className="sidebar__icon" />
-              Blog
-            </li>
-          </NavLink>
           <NavLink className="sidebar__link" exact to="/team">
             <li className="sidebar__list__item" onClick={closeSidebar}>
               <MdPeople className="sidebar__icon" />
@@ -49,6 +44,12 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
             <li className="sidebar__list__item" onClick={closeSidebar}>
               <GiStoneCrafting className="sidebar__icon" />
               Guilds
+            </li>
+          </NavLink>
+          <NavLink className="sidebar__link" exact to="/blog">
+            <li className="sidebar__list__item" onClick={closeSidebar}>
+              <FaBell className="sidebar__icon" />
+              News
             </li>
           </NavLink>
         </ul>

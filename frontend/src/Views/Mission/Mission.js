@@ -1,5 +1,10 @@
 import React from "react";
+import Title from "../Title";
 
-const Mission = () => <div>Mission site</div>;
+const Mission = () => (
+  <section className="mission__container">
+    <Title>Our Mission</Title>
+  </section>
+);
 
 export default Mission;

@@ -1,12 +1,12 @@
-// variables 
+// variables
 
 // graphics
 $base-background: url("../../assets/images/body_bg.png");
+$boosted-background: url("../../assets/images/body_bg_boosted.png");
 
-//colors 
+//colors
 $base-text-color: #2f3542;
 $base-contrast-color: #141414;
-
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
@@ -25,9 +25,8 @@ $base-contrast-color: #141414;
     }
   }
   @if $breakpoint == big-desktop {
-    @media only screen and (min-width: 112.5em) {
+    @media only screen and (min-width: 90em) {
       @content;
     }
   }
 }
-
