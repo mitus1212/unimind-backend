@@ -48,3 +48,28 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.title
+
+class TeamMember(models.Model):
+    name = models.CharField(max_length=40)
+    slug = models.SlugField()
+    nick = models.SlugField(max_length=40)
+    role = models.CharField(max_length=50)
+    thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/')
+    
+
+    def save(self, *args, **kwargs):
+        original_slug = slugify(self.name)
+        queryset = BlogPost.objects.all().filter(slug__iexact=original_slug).count()
+
+        count = 1
+        slug = original_slug
+        while(queryset):
+            slug = original_slug + '-' + str(count)
+            count += 1
+            queryset = TeamMember.objects.all().filter(slug__iexact=slug).count()
+
+        self.slug = slug
+        super(TeamMember, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name

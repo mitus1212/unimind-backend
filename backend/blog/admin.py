@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import BlogPost
+from .models import BlogPost, TeamMember
 
 class BlogPostAdmin(SummernoteModelAdmin):
     exclude = ('slug', )
@@ -11,3 +11,13 @@ class BlogPostAdmin(SummernoteModelAdmin):
     summernote_fields = ('content', )
 
 admin.site.register(BlogPost, BlogPostAdmin)
+
+class TeamMemberAdmin(SummernoteModelAdmin):
+    exclude = ('slug', )
+    list_display = ('name', 'nick', 'role')
+    list_display_links = ('nick',)
+    search_fields = ('nick', )
+    list_per_page = 25
+    summernote_fields = ('role', )
+
+admin.site.register(TeamMember, TeamMemberAdmin)

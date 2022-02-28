@@ -1,7 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Card from "./Card";
 // import { teamData } from "./Data";
-import photo from "../../assets/images/card_photos/saczyyy.jpg";
 import Title from "../../Views/Title";
 import axios from "axios";
 
@@ -31,7 +30,7 @@ const Team = () => {
             name={cardData.name}
             nick={cardData.nick}
             role={cardData.role}
-            image={photo}
+            image={cardData.image}
           />
         ))}
       </div>
