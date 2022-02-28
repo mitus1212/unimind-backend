@@ -1,0 +1,56 @@
+.team {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &__title {
+    color: $base-text-color;
+    margin-top: 5rem;
+    font-size: 5rem;
+  }
+
+  &__cards {
+    &__container {
+      margin: 5rem auto 0 auto;
+      height: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5rem;
+
+      @include respond(tab-port) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include respond(phone) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__item {
+      background-color: white;
+      border-radius: 4px;
+      width: 28rem;
+      height: 32rem;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+
+      box-shadow: inset 0px 0px 0px 1px #edeef4;
+
+      @include respond(phone) {
+        width: 40rem;
+        height: 40rem;
+        max-width: 90vw;
+      }
+    }
+  }
+}
