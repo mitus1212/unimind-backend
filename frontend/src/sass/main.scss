@@ -3,12 +3,13 @@
 @import "base/base";
 @import "base/typography";
 
-@import "components/BlogDetail";
-@import "components/Category";
-@import "components/Navbar";
-@import "components/Sidebar";
+@import "BlogStyles/Blog";
+@import "BlogStyles/BlogDetail";
+@import "BlogStyles/Category";
+@import "Elements/Navbar";
+@import "Elements/Sidebar";
+@import "Elements/Title";
 
-@import "views/Blog";
-@import "views/Home";
-@import "views/Team";
-@import "views/Mission";
+@import "OnepageStyles/Home";
+@import "OnepageStyles/Mission";
+@import "OnepageStyles/Team";

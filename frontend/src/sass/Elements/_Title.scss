@@ -1,0 +1,24 @@
+.views__title {
+  text-align: center;
+  color: $base-text-color;
+  margin-top: 15rem;
+  font-size: 5rem;
+  z-index: 1;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+
+  &:after {
+    position: relative;
+    top: -4rem;
+    left: 0.1rem;
+    background: $base-background;
+    display: block;
+    content: "";
+    width: auto;
+    height: 5rem;
+    background-size: cover;
+    background-position: right;
+    background-size: 150%;
+    z-index: -1;
+  }
+}

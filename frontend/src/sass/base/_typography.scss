@@ -1,24 +1,2 @@
 $nav-font: "Poppins";
 $content-font: "Montserrat";
-
-.views__title {
-  text-align: center;
-  color: $base-text-color;
-  margin-top: 10rem;
-  font-size: 5rem;
-  z-index: 1;
-  text-transform: uppercase;
-
-  &:after {
-    position: relative;
-    top: -4rem;
-    background: $base-background;
-    display: block;
-    content: "";
-    width: auto;
-    height: 5rem;
-    background-size: cover;
-    background-position: right;
-    z-index: -1;
-  }
-}
