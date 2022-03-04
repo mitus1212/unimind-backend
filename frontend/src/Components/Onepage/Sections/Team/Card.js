@@ -3,12 +3,10 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiFillYoutube } from "react-icons/ai";
-import Aos from "aos";
-import "aos/dist/aos.css";
+
 
 const Card = (props) => {
   useEffect(() => {
-    Aos.init({ once: true, duration: 1000 });
 
     // setInterval(() => {
     //   fetchTeamData();
@@ -16,7 +14,7 @@ const Card = (props) => {
   }, []);
 
   return (
-    <div className="team__cards__item" data-aos="fade-in">
+    <div className="team__cards__item">
       <img alt="Saczyyy" src={props.image}></img>
       <h4 className="team__cards__title">
         {props.name}

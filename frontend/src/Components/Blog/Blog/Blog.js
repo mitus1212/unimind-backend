@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Title from "../../Elements/Title/Title";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const Blog = () => {
@@ -21,6 +23,7 @@ const Blog = () => {
   }, []);
 
   useEffect(() => {
+    AOS.init({ once: true, duration: 700, });
     const fetchBlogs = async () => {
       try {
         const res = await axios.get(
@@ -130,7 +133,7 @@ const Blog = () => {
       </div> */
     <>
 
-      <section className="blog__container">
+      <section className="blog__container"  data-aos="fade-in">
         <Title>Aktualności</Title>
         <section className="blog__post__wrapper">{getBlogs()}</section>
       </section>

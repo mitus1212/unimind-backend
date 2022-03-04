@@ -6,34 +6,15 @@ import LoadingScreen from "../Elements/Loading";
 
 
 const LandingLayout = (props) => {
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-      
-    }, 3000)
-  }, []);
+  
 
   return (
     <>
-
-    {loading ? (
-      <LoadingScreen>
-      <BeatLoader color="white" loading={loading} size={10} />
-      </LoadingScreen>
-    ) : (
-     <>
     <Navigation />
     {props.children}
     <Footer />
     </>
-    )}
-    
-  </>
-  );
-  
+  ); 
 };
 
 export default LandingLayout;
