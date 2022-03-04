@@ -32,7 +32,7 @@ const BlogDetail = (props) => {
 
   return (
     <>
-      <Navigation />
+     
       <div className="container mt-3">
         <h1 className="display-2">{blog.title}</h1>
         <h2 className="text-muted mt-3">

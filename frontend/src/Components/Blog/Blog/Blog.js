@@ -134,12 +134,12 @@ const Blog = () => {
         </div>
       </div> */
     <>
-      <Navigation />
+
       <section className="blog__container">
         <Title>Aktualności</Title>
         <section className="blog__post__wrapper">{getBlogs()}</section>
       </section>
-      <Footer />
+
     </>
   );
 };
