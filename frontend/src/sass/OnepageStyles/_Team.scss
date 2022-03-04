@@ -36,15 +36,15 @@
 
   &__cards {
     &__container {
-      margin: 0auto 0 auto;
+      margin: 0 auto 0 auto;
       height: auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 8rem;
 
-      @include respond(big-desktop) {
-        grid-template-columns: repeat(4, 1fr);
-      }
+      // @include respond(big-desktop) {
+      //   grid-template-columns: repeat(4, 1fr);
+      // }
 
       @include respond(tab-port) {
         grid-template-columns: repeat(2, 1fr);

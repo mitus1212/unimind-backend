@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import Title from "../../Elements/Title/Title";
 import EthPhoto from "../../../assets/images/post_photo/Ethereum.jpg";
 import Navigation from "../../Elements/noHomeNavigation/Navigation";
+import Footer from "../../Elements/Footer/Footer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
-  const [featuredBlog, setFeaturedBlog] = useState([]);
+  // const [featuredBlog, setFeaturedBlog] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,7 +17,7 @@ const Blog = () => {
         const res = await axios.get(
           `${process.env.REACT_APP_API_URL}/api/blog/featured`
         );
-        setFeaturedBlog(res.data[0]);
+        // setFeaturedBlog(res.data[0]);
         console.log(res.data);
       } catch (err) {}
     };
@@ -59,27 +61,25 @@ const Blog = () => {
     blogs.map((blogPost) => {
       return list.push(
         <>
-          <div className="blog__post">
-            <div className="blog__content">
-              <strong className="blog__cattegory">
-                {capitalizeFirstLetter(blogPost.category)}
-              </strong>
-              <h3 className="blog__title">{blogPost.title}</h3>
-              <div className="blog__date">
-                {blogPost.month} {blogPost.day}
-              </div>
-              <p className="blog__excerpt">{blogPost.excerpt}</p>
-              <Link to={`/news/${blogPost.slug}`} className="blog__link">
-                Continue reading
-              </Link>
+          <div className="blog__post__tile">
+            <div className="blog__post__image">
+              <img alt="blog__photo" src={blogPost.thumbnail}></img>
             </div>
-            <div className="blog__img">
-              <img
-                width="auto"
-                height="auto "
-                src={blogPost.thumbnail}
-                alt="thumbnail"
-              />
+            <div className="blog__post__content">
+              <div className="blog__post__category">{blogPost.category}</div>
+              <div className="blog__post__title">
+                {blogPost.title}
+                <div className="blog__post__row">
+                  <span className="blog__post__date">
+                    {blogPost.day} {blogPost.month}
+                  </span>
+                  {/* <span className="blog__post__author">~ {blogPost.author}t</span> */}
+                </div>
+              </div>
+              <div className="blog__post__text">{blogPost.excerpt}</div>
+              <Link to={`/news/${blogPost.slug}`} className="blog__post__link">
+                WIĘCEJ
+              </Link>
             </div>
           </div>
         </>
@@ -137,57 +137,9 @@ const Blog = () => {
       <Navigation />
       <section className="blog__container">
         <Title>Aktualności</Title>
-        <section className="blog__post__wrapper">
-          <div className="blog__post__tile">
-            <div className="blog__post__image">
-              <img src={EthPhoto}></img>
-            </div>
-            <div className="blog__post__content">
-              <div className="blog__post__category">Twitter</div>
-              <div className="blog__post__title">
-                Jak zmniejszyć prowizje na Ethereum?{" "}
-                <div className="blog__post__row">
-                  <span className="blog__post__date">25 JAN 2022,</span>
-                  <span className="blog__post__author">~ Wikist</span>
-                </div>
-              </div>
-              <div className="blog__post__text">
-                Nam venenatis dapibus mauris. Vivamus venenatis imperdiet eros
-                dapibus dignissim. Ut porta eros in commodo faucibus. Integer
-                elementum diam ut justo.
-              </div>
-              <a className="blog__post__link" href="#">
-                WIĘCEJ
-              </a>
-            </div>
-          </div>
-          <hr></hr>
-          <div className="blog__post__tile">
-            <div className="blog__post__image">
-              <img src={EthPhoto}></img>
-            </div>
-            <div className="blog__post__content">
-              <div className="blog__post__category">Article</div>
-              <div className="blog__post__title">
-                Jak zmniejszyć prowizje na Ethereum?
-                <div className="blog__post__row">
-                  <span className="blog__post__date">25 JAN 2022,</span>
-                  <span className="blog__post__author">~ Wikist</span>
-                </div>
-              </div>
-              <div className="blog__post__text">
-                Nam venenatis dapibus mauris. Vivamus venenatis imperdiet eros
-                dapibus dignissim. Ut porta eros in commodo faucibus. Integer
-                elementum diam ut justo.
-              </div>
-              <a className="blog__post__link" href="#">
-                WIĘCEJ
-              </a>
-            </div>
-          </div>
-          <hr></hr>
-        </section>
+        <section className="blog__post__wrapper">{getBlogs()}</section>
       </section>
+      <Footer />
     </>
   );
 };

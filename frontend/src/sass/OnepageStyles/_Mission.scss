@@ -8,7 +8,6 @@
     min-height: 100vh;
     overflow: hidden;
     background-color: white;
-    padding-bottom: 10rem;
   }
 
   &__text__box {
@@ -37,6 +36,11 @@
     border: 1px solid rgba(#6f7073, 0.1);
     box-shadow: 0px 0px 10px rgba(#d8d8d8, 0.6);
     font-weight: 400;
+
+    a {
+      text-decoration: none;
+      color: #738adb;
+    }
   }
 
   &__list__title {

@@ -16,7 +16,7 @@ const Card = (props) => {
   }, []);
 
   return (
-    <div className="team__cards__item" data-aos="flip-left">
+    <div className="team__cards__item" data-aos="fade-in">
       <img alt="Saczyyy" src={props.image}></img>
       <h4 className="team__cards__title">
         {props.name}

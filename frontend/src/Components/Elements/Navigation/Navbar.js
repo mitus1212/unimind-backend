@@ -1,8 +1,7 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
-
-import logo from "../../../assets/images/unimind_logo.png";
+import { FaTwitter, FaDiscord, FaYoutube } from "react-icons/fa";
 
 const Navbar = ({ isOpen, toggleSidebar }) => {
   const hamburgerStyle = isOpen
@@ -56,6 +55,17 @@ const Navbar = ({ isOpen, toggleSidebar }) => {
               News
             </NavLink>
           </li>
+          <li className="navbar__list__item">
+            <a
+              target="_blank"
+              href="https://webtrzy.xyz"
+              rel="noreferrer"
+              className="navbar__link"
+              to="/news"
+            >
+              Webtrzy.xyz
+            </a>
+          </li>
         </ul>
 
         <div className="navbar__media">
@@ -65,7 +75,8 @@ const Navbar = ({ isOpen, toggleSidebar }) => {
             target="_blank"
             href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjTwv3Yjuz1AhWltYsKHTmmDkYQFnoECAYQAQ&url=https%3A%2F%2Ftwitter.com%2FUnimindDAO&usg=AOvVaw0ih4xp3qAh8AJjOdl8uB90"
           >
-            <i className="fab fa-twitter"></i>
+            {/* <i className="fab fa-twitter"></i> */}
+            <FaTwitter />
           </a>
           <a
             className="navbar__media__item"
@@ -73,7 +84,7 @@ const Navbar = ({ isOpen, toggleSidebar }) => {
             target="_blank"
             href="https://discord.gg/dkRDuzF43W"
           >
-            <i className="fab fa-discord"></i>
+            <FaDiscord />
           </a>
           <a
             className="navbar__media__item"
@@ -81,7 +92,7 @@ const Navbar = ({ isOpen, toggleSidebar }) => {
             target="_blank"
             href="https://www.youtube.com/channel/UChg6fu3P7qqHJedobi_ALoA"
           >
-            <i className="fab fa-youtube"></i>
+            <FaYoutube />
           </a>
         </div>
 

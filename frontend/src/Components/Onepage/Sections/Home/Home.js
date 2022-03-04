@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import Navigation from "../../../Elements/Navigation/Navigation";
+import React from "react";
+import { Link } from "react-scroll";
 
 const Home = () => {
   return (
@@ -10,14 +10,14 @@ const Home = () => {
           <p className="header__description">
             Najlepsza społeczność Web3 w Polsce
           </p>
-          <a
+          <Link
             className="header__button"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://discord.gg/dkRDuzF43W"
+            smooth={true}
+            duration={1000}
+            to="mission__view"
           >
             WIĘCEJ
-          </a>
+          </Link>
         </header>
       </section>
     </>

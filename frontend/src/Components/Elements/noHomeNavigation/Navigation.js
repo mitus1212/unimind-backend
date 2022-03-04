@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import Navbar from "./Navbar";
-import Sidebar from "../Navigation/Sidebar";
+import Sidebar from "./Sidebar";
 
 const Navigation = () => {
   const [showSidebar, setShowSidebar] = useState(false);

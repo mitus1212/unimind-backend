@@ -1,6 +1,5 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
-import { Link } from "react-scroll";
 
 // import logo from "../../assets/images/unimind_logo.png";
 
@@ -20,6 +19,22 @@ const Navbar = ({ isOpen, toggleSidebar }) => {
             <NavLink className="navbar__link" to="/">
               Home
             </NavLink>
+          </li>
+          <li className="navbar__list__item">
+            <NavLink className="navbar__link" to="/news">
+              News
+            </NavLink>
+          </li>
+          <li className="navbar__list__item">
+            <a
+              target="_blank"
+              href="https://webtrzy.xyz"
+              rel="noreferrer"
+              className="navbar__link"
+              to="/news"
+            >
+              Webtrzy.xyz
+            </a>
           </li>
         </ul>
 

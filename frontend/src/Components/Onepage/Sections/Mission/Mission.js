@@ -22,8 +22,11 @@ const Mission = () => (
         oferuje najlepsze warunki i wsparcie w Polsce.
       </p>
       <div className="mission__button">
-        Dołącz do naszego metaversu na Discord! Najlepsza społeczność web3 w
-        Polsce.
+        Dołącz do naszego metaversu na{" "}
+        <a rel="noreferrer" href="https://discord.com/invite/dkRDuzF43W">
+          Discord!
+        </a>{" "}
+        Najlepsza społeczność web3 w Polsce.
       </div>
       <ul className="mission__list">
         <span className="mission__list__title">Wartości:</span>
