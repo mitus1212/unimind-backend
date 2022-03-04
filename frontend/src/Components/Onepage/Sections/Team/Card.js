@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 
 const Card = (props) => {
   useEffect(() => {
-    Aos.init({ once: true, duration: 2000 });
+    Aos.init({ once: true, duration: 1000 });
 
     // setInterval(() => {
     //   fetchTeamData();

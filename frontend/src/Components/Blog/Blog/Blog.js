@@ -2,14 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Title from "../../Elements/Title/Title";
-import EthPhoto from "../../../assets/images/post_photo/Ethereum.jpg";
-import Navigation from "../../Elements/noHomeNavigation/Navigation";
-import Footer from "../../Elements/Footer/Footer";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
-  // const [featuredBlog, setFeaturedBlog] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,7 +13,6 @@ const Blog = () => {
         const res = await axios.get(
           `${process.env.REACT_APP_API_URL}/api/blog/featured`
         );
-        // setFeaturedBlog(res.data[0]);
         console.log(res.data);
       } catch (err) {}
     };

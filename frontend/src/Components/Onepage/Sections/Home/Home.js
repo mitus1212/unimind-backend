@@ -5,12 +5,12 @@ import "aos/dist/aos.css";
 
 const Home = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({ once: true, duration: 1000 });
   }, []);
 
   return (
     <>
-      <section className="home_container" id="home__view">
+      <section data-aos="fade-in" className="home_container" id="home__view">
         <header className="header__wrapper">
           <h1 className="header__title">Unimind DAO</h1>
           <p className="header__description">
