@@ -35,16 +35,4 @@ export const teamData = [
     role: "Founder",
     // image: { image },
   },
-  {
-    name: "Piotr Saczuk",
-    nick: "Saczyyy",
-    role: "Founder",
-    // image: { image },
-  },
-  {
-    name: "Piotr Saczuk",
-    nick: "Saczyyy",
-    role: "Founder",
-    // image: { image },
-  },
 ];

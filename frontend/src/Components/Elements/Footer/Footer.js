@@ -5,7 +5,7 @@ const Footer = () => (
   <>
     <div className="footer">
       <div className="footer__container">
-        <div className="footer__logo">Unimind.</div>
+        {/* <div className="footer__logo">Unimind.</div> */}
         <div className="footer__col__wrapper">
           <div className="footer__col">
             <div className="footer__col__title">Partnerzy</div>

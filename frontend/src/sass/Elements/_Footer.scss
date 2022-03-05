@@ -1,6 +1,6 @@
 .footer {
   margin-top: 10rem;
-  padding-top: 7rem;
+  padding-top: 5rem;
   padding-bottom: 1rem;
   display: block;
   width: 100%;
@@ -120,8 +120,9 @@
   }
 
   &__copy {
+    display: block;
     transform: translateX(-1rem);
-    margin-top: 10rem;
+    margin-top: 6rem;
     text-align: center;
     font-size: 1.2rem;
     opacity: 0.6;
