@@ -4,9 +4,11 @@ import { IoIosSchool } from "react-icons/io";
 import { MdLockOpen } from "react-icons/md";
 import { FaPeopleCarry } from "react-icons/fa";
 import { MdOutlineEmojiPeople } from "react-icons/md";
+import EmptyPage from "../../../Elements/EmptyPage/EmptyPage";
 
 const Mission = () => (
-  <section className="mission__container" id="mission__view">
+  <section id="mission__view">
+    <EmptyPage>
     <Title>MISJA</Title>
     <div className="mission__text__box">
       <p>
@@ -75,6 +77,7 @@ const Mission = () => (
         </li>
       </ul>
     </div>
+    </EmptyPage>
   </section>
 );
 

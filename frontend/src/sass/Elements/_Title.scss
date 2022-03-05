@@ -1,18 +1,21 @@
 .views__title {
+  display: block;
+  width: auto;
   text-align: center;
   color: $base-text-color;
-  margin-top: 15rem;
   font-size: 5rem;
   z-index: 1;
-  margin-bottom: 5rem;
   text-transform: uppercase;
+  margin-top: 12rem;
+  margin-bottom: 4rem;
+
 
   &:after {
     position: relative;
     top: -4rem;
     left: 0.1rem;
     background: $base-background;
-    display: block;
+    display: flex;
     content: "";
     width: auto;
     height: 5rem;

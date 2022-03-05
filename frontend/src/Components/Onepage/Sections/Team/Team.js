@@ -5,6 +5,7 @@ import Title from "../../../Elements/Title/Title";
 import axios from "axios";
 import { teamData } from "./Data";
 import image from "./card_photos/saczyyy.jpg";
+import EmptyPage from "../../../Elements/EmptyPage/EmptyPage";
 
 const Team = () => {
   // const [teamData, setTeamData] = useState([]);
@@ -28,7 +29,10 @@ const Team = () => {
   // }, []);
 
   return (
-    <section className="team__container" id="team__view">
+    
+    
+    <section id="team__view">
+      <EmptyPage>
       <Title>NASZ ZESPÓŁ</Title>
       <div className="team__cards__container">
         {teamData.map((cardData) => (
@@ -40,7 +44,9 @@ const Team = () => {
           />
         ))}
       </div>
+      </EmptyPage>
     </section>
+    
   );
 };
 
