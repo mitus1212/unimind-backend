@@ -1,14 +1,18 @@
 import React from "react";
 import { FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
-const Footer = () => (
+const Footer = () => {
+  const { t } = useTranslation();
+
+  return (
   <>
     <div className="footer">
       <div className="footer__container">
         {/* <div className="footer__logo">Unimind.</div> */}
         <div className="footer__col__wrapper">
           <div className="footer__col">
-            <div className="footer__col__title">Partnerzy</div>
+            <div className="footer__col__title">{t("footer_partners")}</div>
             <div className="footer__link__container">
               <div className="footer__col__link">
                 <a rel="noreferrer" target="_blank" href="https://webtrzy.xyz">
@@ -23,7 +27,7 @@ const Footer = () => (
             </div>
           </div>
           <div className="footer__col">
-            <div className="footer__col__title">Kontakt</div>
+            <div className="footer__col__title">{t("footer_contact")}</div>
             <div className="footer__link__contaienr">
               <div className="footer__col__link">
                 <a
@@ -81,6 +85,7 @@ const Footer = () => (
       </div>
     </div>
   </>
-);
+  )
+};
 
 export default Footer;

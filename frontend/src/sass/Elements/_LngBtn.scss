@@ -1,0 +1,27 @@
+.lng__container {
+    display: flex;
+    margin-left: 3rem;
+    transform: translateY(0.3rem);
+
+    @include respond(tab-port) {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .lng {
+        display: block;
+        font-size: 2rem;
+
+        &:nth-child(1) {
+            margin-right: 0.5rem;
+
+            @include respond(tab-port) {
+                margin-right: 1rem;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

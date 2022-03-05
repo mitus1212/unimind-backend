@@ -5,10 +5,12 @@ import { MdPeople } from "react-icons/md";
 import { AiFillStar } from "react-icons/ai";
 import { FaBell } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
+
 
 const Sidebar = ({ isOpen, closeSidebar }) => {
   const styles = isOpen ? "sidebar sidebar--open" : "sidebar sidebar--closed";
-
+  const { t } = useTranslation();
   return (
     <Fragment>
       {isOpen ? (
@@ -29,7 +31,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
           >
             <li className="sidebar__list__item" onClick={closeSidebar}>
               <AiFillHome className="sidebar__icon" />
-              Home
+              {t("nav_home")}
             </li>
           </Link>
           <Link
@@ -41,7 +43,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
           >
             <li className="sidebar__list__item" onClick={closeSidebar}>
               <AiFillStar className="sidebar__icon" />
-              Mission
+              {t("nav_mission")}
             </li>
           </Link>
           <Link
@@ -53,7 +55,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
           >
             <li className="sidebar__list__item" onClick={closeSidebar}>
               <MdPeople className="sidebar__icon" />
-              Team
+              {t("nav_team")}
             </li>
           </Link>
 
@@ -66,7 +68,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
           <NavLink className="sidebar__link" exact to="/news">
             <li className="sidebar__list__item" onClick={closeSidebar}>
               <FaBell className="sidebar__icon" />
-              News
+              {t("nav_news")}
             </li>
           </NavLink>
           <a

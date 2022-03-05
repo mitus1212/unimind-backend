@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "../src/sass/main.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import BeatLoader from "react-spinners/BeatLoader";
 import LoadingScreen from "./Components/Elements/Loading";
-import ScrollToTop from "./Components/Utilities/Utilities";
-
+import ScrollToTop from "./Components/Utilities/ScroolToTop";
 // views
 import Blog from "./Components/Blog/Blog/Blog";
 import Landing from "./Components/Onepage/Landing";
-
 // layouts
 import defaultLayout from "./Components/Layouts/NoHome";
 import LandingLayout from "./Components/Layouts/Home";
-
-
 // components (if id)
 import BlogDetail from "./Components/Blog/BlogDetail/BlogDetail";
+
 
 
 const AppRoute = ({component:Component, layout:Layout, ...rest }) => (
@@ -27,6 +23,8 @@ const AppRoute = ({component:Component, layout:Layout, ...rest }) => (
 const App = () => {
 
   const [loading, setLoading] = useState(false);
+
+
 
   useEffect(() => {
     setLoading(true)
@@ -41,9 +39,7 @@ const App = () => {
     
     <>
     { loading ? (
-    <LoadingScreen>
-      <BeatLoader color="white" loading={loading} size={10} />
-    </LoadingScreen>
+    <LoadingScreen loading={loading} />
     
   ) : (
     <>

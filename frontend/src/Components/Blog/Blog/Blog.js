@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import Title from "../../Elements/Title/Title";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import EmptyPage from "../../Elements/EmptyPage/EmptyPage";
+import { useTranslation } from 'react-i18next';
 
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,10 +50,10 @@ const Blog = () => {
   //             </nav>
   //         </div>
 
-  const capitalizeFirstLetter = (word) => {
-    if (word) return word.charAt(0).toUpperCase() + word.slice(1);
-    return "";
-  };
+  // const capitalizeFirstLetter = (word) => {
+  //   if (word) return word.charAt(0).toUpperCase() + word.slice(1);
+  //   return "";
+  // };
 
   const getBlogs = () => {
     let list = [];
@@ -134,8 +137,10 @@ const Blog = () => {
     <>
 
       <section className="blog__container"  data-aos="fade-in">
-        <Title>Aktualności</Title>
+        <EmptyPage>
+        <Title>{t("news_title")}</Title>
         <section className="blog__post__wrapper">{getBlogs()}</section>
+        </EmptyPage>
       </section>
 
     </>

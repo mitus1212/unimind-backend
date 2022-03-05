@@ -2,11 +2,15 @@ import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import { FaTwitter, FaDiscord, FaYoutube } from "react-icons/fa";
+import LngBtn from "../LngBtn/LngBtn";
+import { useTranslation } from 'react-i18next';
 
 const Navbar = ({ isOpen, toggleSidebar }) => {
   const hamburgerStyle = isOpen
     ? "navbar__button__component navbar__button__component--active"
     : "navbar__button__component";
+
+    const { t } = useTranslation();
 
   return (
     <Fragment>
@@ -27,7 +31,7 @@ const Navbar = ({ isOpen, toggleSidebar }) => {
               className="navbar__link"
               to="home__view"
             >
-              Home
+              {t("nav_home")}
             </Link>
           </li>
           <li className="navbar__list__item">
@@ -37,7 +41,7 @@ const Navbar = ({ isOpen, toggleSidebar }) => {
               className="navbar__link"
               to="mission__view"
             >
-              Misja
+              {t("nav_mission")}
             </Link>
           </li>
           <li className="navbar__list__item">
@@ -47,12 +51,12 @@ const Navbar = ({ isOpen, toggleSidebar }) => {
               className="navbar__link"
               to="team__view"
             >
-              Team
+              {t("nav_team")}
             </Link>
           </li>
           <li className="navbar__list__item">
             <NavLink className="navbar__link" to="/news">
-              News
+              {t("nav_news")}
             </NavLink>
           </li>
           <li className="navbar__list__item">
@@ -96,11 +100,17 @@ const Navbar = ({ isOpen, toggleSidebar }) => {
           </a>
         </div>
 
+        
+
+        <LngBtn />
         <button className="navbar__button" onClick={toggleSidebar}>
           <div className={`${hamburgerStyle}`}></div>
           <div className={`${hamburgerStyle}`}></div>
           <div className={`${hamburgerStyle}`}></div>
         </button>
+
+       
+ 
       </nav>
     </Fragment>
   );

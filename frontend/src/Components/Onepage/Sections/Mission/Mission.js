@@ -5,80 +5,71 @@ import { MdLockOpen } from "react-icons/md";
 import { FaPeopleCarry } from "react-icons/fa";
 import { MdOutlineEmojiPeople } from "react-icons/md";
 import EmptyPage from "../../../Elements/EmptyPage/EmptyPage";
+import { useTranslation } from 'react-i18next';
 
-const Mission = () => (
-  <section id="mission__view">
+const Mission = () => {
+
+const { t } = useTranslation();
+
+  return (
+<section id="mission__view">
     <EmptyPage>
-    <Title>MISJA</Title>
+    <Title>{t("mission_title")}</Title>
     <div className="mission__text__box">
       <p>
-        <strong>
-          UNIMIND DAO istnieje, aby ułatwić i przyspieszyć karierę w świecie
-          Web3 dla każdego.
-        </strong>{" "}
-        Osiągniemy to poprzez udostępnianie każdemu możliwości pracy w Web3,
-        wykorzystując inkluzywne metody organizacyjne DAO, a także poprzez
-        tworzenie materiałów edukacyjnych, które mają uczyć ludzi myśleć
-        samodzielnie. Dążymy do tego, aby UNIMIND był oczywistym wyborem przy
-        starcie kariery jako twórca lub freelancer w świecie Web3, ponieważ
-        oferuje najlepsze warunki i wsparcie w Polsce.
+        <strong>{t("mission_bold_text")}</strong>{t("mission_text")}
       </p>
       <div className="mission__button">
-        Dołącz do naszego metaversu na{" "}
+      {t("mission_discord_button_text_first")}{" "}
         <a rel="noreferrer" href="https://discord.com/invite/dkRDuzF43W">
           Discord!
         </a>{" "}
-        Najlepsza społeczność web3 w Polsce.
+        {t("mission_discord_button_text_second")}
       </div>
       <ul className="mission__list">
-        <span className="mission__list__title">Wartości:</span>
+        <span className="mission__list__title">{t("mission_values")}:</span>
         <li>
           <strong>
             <span>
               <IoIosSchool />
             </span>
-            Edukacja
+            {t("mission_education_title")}
           </strong>{" "}
-          - uczymy tylko faktów, aby każdy mógł wyrobić własną opinię. Stawiamy
-          granicę pomiędzy jednymi, a drugimi.
+          {t("mission_education_text")}
         </li>
         <li>
           <strong>
             <span>
               <MdLockOpen />
             </span>
-            Transparencja
+            {t("mission_transparent_title")}
           </strong>{" "}
-          - nasze rozwiązania techniczne udostępniamy w formule open-source,
-          dokumentujemy i dzielimy się ze światem naszymi postępami, a większość
-          konwersacji prowadzimy publicznie.
+          {t("mission_transparent_text")}
         </li>
         <li>
           <strong>
             <span>
               <MdOutlineEmojiPeople />
             </span>
-            Odpowiedzialność
+            {t("mission_responsibility_title")}
           </strong>{" "}
-          - pracujemy w samoorganizujący się sposób, gdzie każdy jest w pełni
-          odpowiedzialny za swoje inicjatywy, a każdy pomysł może być
-          zrealizowany wtedy i tylko wtedy, jeśli bierze się za niego pełną
-          odpowiedzialność.
+          {t("mission_responsibility_text")}
         </li>
         <li>
           <strong>
             <span>
               <FaPeopleCarry />
             </span>
-            Integracja
+            {t("mission_integration_title")}
           </strong>{" "}
-          - każdy zainteresowany może wesprzeć UNIMIND i czerpać z tego
-          korzyści.
+          {t("mission_integration_text")}
         </li>
       </ul>
     </div>
     </EmptyPage>
   </section>
-);
+  )
+  
+};
 
 export default Mission;
