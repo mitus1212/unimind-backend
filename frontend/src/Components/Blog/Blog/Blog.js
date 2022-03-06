@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import Title from "../../Elements/Title/Title";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import EmptyPage from "../../Elements/EmptyPage/EmptyPage";
 import { useTranslation } from 'react-i18next';
+import BlogPost from "./BlogPost";
 
 
 const Blog = () => {
@@ -38,6 +38,24 @@ const Blog = () => {
 
     fetchBlogs();
   }, []);
+
+    const posts = blogs.map((blogPost) => {
+      return (
+        <>
+          <BlogPost 
+            key={blogPost.title}
+            title={blogPost.title}
+            thumbnail={blogPost.thumbnail}
+            category={blogPost.category}
+            month={blogPost.month}
+            day={blogPost.day}
+            excerpt={blogPost.excerpt}
+            slug={blogPost.slug}
+          />
+        </>
+        )
+    });
+ 
   // return (
   //     <div className='container mt-3'>
   //         <div className="nav-scroller py-1 mb-2">
@@ -55,48 +73,48 @@ const Blog = () => {
   //   return "";
   // };
 
-  const getBlogs = () => {
-    let list = [];
-    let result = [];
+  // const getBlogs = () => {
+  //   let list = [];
+  //   let result = [];
 
-    blogs.map((blogPost) => {
-      return list.push(
-        <>
-          <div className="blog__post__tile">
-            <div className="blog__post__image">
-              <img alt="blog__photo" src={blogPost.thumbnail}></img>
-            </div>
-            <div className="blog__post__content">
-              <div className="blog__post__category">{blogPost.category}</div>
-              <div className="blog__post__title">
-                {blogPost.title}
-                <div className="blog__post__row">
-                  <span className="blog__post__date">
-                    {blogPost.day} {blogPost.month}
-                  </span>
-                  {/* <span className="blog__post__author">~ {blogPost.author}t</span> */}
-                </div>
-              </div>
-              <div className="blog__post__text">{blogPost.excerpt}</div>
-              <Link to={`/news/${blogPost.slug}`} className="blog__post__link">
-                WIĘCEJ
-              </Link>
-            </div>
-          </div>
-        </>
-      );
-    });
+  //   blogs.map((blogPost) => {
+  //     return list.push(
+  //       <>
+  //         <div className="blog__post__tile">
+  //           <div className="blog__post__image">
+  //             <img alt="blog__photo" src={blogPost.thumbnail}></img>
+  //           </div>
+  //           <div className="blog__post__content">
+  //             <div className="blog__post__category">{blogPost.category}</div>
+  //             <div className="blog__post__title">
+  //               {blogPost.title}
+  //               <div className="blog__post__row">
+  //                 <span className="blog__post__date">
+  //                   {blogPost.day} {blogPost.month}
+  //                 </span>
+  //                 {/* <span className="blog__post__author">~ {blogPost.author}t</span> */}
+  //               </div>
+  //             </div>
+  //             <div className="blog__post__text">{blogPost.excerpt}</div>
+  //             <Link to={`/news/${blogPost.slug}`} className="blog__post__link">
+  //               WIĘCEJ
+  //             </Link>
+  //           </div>
+  //         </div>
+  //       </>
+  //     );
+  //   });
 
-    for (let i = 0; i < list.length; i += 1) {
-      result.push(
-        <div key={i} className="blog__tile">
-          {list[i]}
-        </div>
-      );
-    }
+  //   for (let i = 0; i < list.length; i += 1) {
+  //     result.push(
+  //       <div key={i} className="blog__tile">
+  //         {list[i]}
+  //       </div>
+  //     );
+  //   }
 
-    return result;
-  };
+  //   return result;
+  // };
 
   return (
     // <div className="container mt-3">
@@ -139,7 +157,7 @@ const Blog = () => {
       <section className="blog__container"  data-aos="fade-in">
         <EmptyPage>
         <Title>{t("news_title")}</Title>
-        <section className="blog__post__wrapper">{getBlogs()}</section>
+        <section className="blog__post__wrapper">{posts}</section>
         </EmptyPage>
       </section>
 

@@ -1,13 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 import TinyFlag from "tiny-flag-react";
 import i18next from 'i18next';
 import cookies from 'js-cookie';
 
+
+
 const LngBtn = (props) => {
+
     const currentLanguage = cookies.get('i18next') || 'en'
 
+
+ 
     return (
-        <div className="lng__container">
+        <>
+        
+            <div className="lng__container">
             <button style={{opacity: "pl" === currentLanguage ? 1 : 0.5}} className="lng lng--pl" disabled={ "pl" === currentLanguage } onClick={() => i18next.changeLanguage("pl")}>
             <TinyFlag
                 country="PL" // ISO 3166-1 alpha-2 code
@@ -23,6 +30,8 @@ const LngBtn = (props) => {
             /> 
             </button>
         </div>
+   
+        </>
     )
 }
 
