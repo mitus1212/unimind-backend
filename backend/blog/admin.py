@@ -18,6 +18,5 @@ class TeamMemberAdmin(SummernoteModelAdmin):
     list_display_links = ('nick',)
     search_fields = ('nick', )
     list_per_page = 25
-    summernote_fields = ('role', )
 
 admin.site.register(TeamMember, TeamMemberAdmin)
