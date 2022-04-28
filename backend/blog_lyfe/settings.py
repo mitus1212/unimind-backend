@@ -15,6 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+#AUTH_USER_MODEL = 'user.User'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -26,6 +27,7 @@ SECRET_KEY = 'django-insecure-e70!+@vrxq$%0arm+ti9on7tj-494i19qkq%&$4aaanod&nkan
 DEBUG = True
 
 ALLOWED_HOSTS = []
+AUTH_USER_MODEL = 'core_user.User'
 
 
 # Application definition
@@ -40,7 +42,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'django_summernote',
-    'blog'
+    'blog',
+    'core',
+    'core.user'
 ]
 
 MIDDLEWARE = [
@@ -141,3 +145,17 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 SUMMERNOTE_THEME = 'bs4'
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000"
+]
