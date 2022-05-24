@@ -55,7 +55,8 @@ class TeamMember(models.Model):
     nick = models.SlugField(max_length=40)
     role = models.CharField(max_length=50)
     thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/')
-    
+    email = models.CharField(max_length=50)
+
 
     def save(self, *args, **kwargs):
         original_slug = slugify(self.name)
