@@ -60,6 +60,7 @@ class TeamMember(models.Model):
     discord = models.CharField(max_length=100, blank=True)
     linkedin = models.CharField(max_length=50, blank=True)
 
+
     def save(self, *args, **kwargs):
         original_slug = slugify(self.name)
         queryset = BlogPost.objects.all().filter(slug__iexact=original_slug).count()
