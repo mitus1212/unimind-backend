@@ -6,14 +6,14 @@ class Categories(models.TextChoices):
     WIKI = 'wiki'
     YOUTUBE = 'youtube'
     TWITTER = 'twitter'
-    ARTICLE = 'article'
+    ARTYKUŁ = 'artykuł'
     COOPERATION = 'cooperation'
 
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=50)
     slug = models.SlugField()
-    category = models.CharField(max_length=50, choices=Categories.choices, default=Categories.ARTICLE)
+    category = models.CharField(max_length=50, choices=Categories.choices, default=Categories.ARTYKUŁ)
     thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/')
     excerpt = models.CharField(max_length=150)
     month = models.CharField(max_length=3)
@@ -55,7 +55,10 @@ class TeamMember(models.Model):
     nick = models.SlugField(max_length=40)
     role = models.CharField(max_length=50)
     thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/')
-    
+    email = models.CharField(max_length=50, blank=True)
+    twitter = models.CharField(max_length=100, blank=True)
+    discord = models.CharField(max_length=100, blank=True)
+    linkedin = models.CharField(max_length=50, blank=True)
 
     def save(self, *args, **kwargs):
         original_slug = slugify(self.name)
