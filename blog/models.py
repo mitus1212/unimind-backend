@@ -6,7 +6,7 @@ class Categories(models.TextChoices):
     WIKI = 'wiki'
     YOUTUBE = 'youtube'
     TWITTER = 'twitter'
-    ARTICLE = 'article'
+    ARTYKUŁ = 'artykuł'
     COOPERATION = 'cooperation'
 
 
@@ -16,7 +16,7 @@ class BlogPost(models.Model):
     category = models.CharField(max_length=50, choices=Categories.choices, default=Categories.ARTICLE)
     thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/')
     excerpt = models.CharField(max_length=150)
-    month = models.CharField(max_length=3)
+    month = models.CharField(max_length=15)
     day = models.CharField(max_length=2)
     content = models.TextField()
     featured = models.BooleanField(default=False)
