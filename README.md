@@ -1,5 +1,5 @@
 # unimind-backend
-Python 3.8 -3.9 is required to start project locally 
+Python 3.8-3.9 is required to start project locally 
 
 **Libraries installation**
 Enter the /blog directory via console and use:
